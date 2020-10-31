@@ -1,0 +1,38 @@
+
+    <section class="mt-5 pt-2">
+        <div class="container-fluid mt-5">
+            <img src="/images/s4.jpeg" style="border-radius: 20px;" class="w-100" alt="">
+
+        </div>
+        <div class="container-fluid mt-5 pl-4 pr-4">
+
+            <div class="row">
+
+                {{#each products}}
+                <div class="col-md-3 pb-4" >
+                    <div class="card pt-2 px-2 ml-auto mr-auto" style="width: 16rem; height:25rem; border-radius:10px;">
+                        <img src="/product-images/{{this._id}}.jpg"
+                        width="5rem"
+                            class="card-img-top" alt="Card image cap"
+                            style="height: 10rem; ">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: 200;">{{this.Name}}</h5>
+                            <p class="card-text" style="font-weight: 200;">Rs.{{this.Price}}</p>
+                            <p class="card-text" style="font-weight: 200;">{{this.Description}}</p>
+                            <div class="row">
+                               <a href="/view-single-product/{{this._id}}"  class="btn" style="background-color: rgb(33, 23, 170); color:#ffff; font-weight:100; ">View</a>
+                                <button onclick="addToCart('{{this._id}}')" class="btn mx-1" style="background-color: rgb(99, 23, 170); color:#ffff; font-weight:100; ">Add to Cart</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        
+    </script>
